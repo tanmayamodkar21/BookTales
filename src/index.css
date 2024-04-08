@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .services-cols-img {
+    @apply h-80 w-80;
+  }
+}
