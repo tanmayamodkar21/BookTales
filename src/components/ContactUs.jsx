@@ -21,13 +21,13 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="mx-auto bg-orange-800 py-20" id="contact">
-      <h1 className="text-center text-white font-bold text-5xl py-4 underline underline-offset-8 pt-2">
+    <div className="mx-auto bg-orange-800 py-16 md:py-20" id="contact">
+      <h1 className="text-center text-white font-bold text-3xl md:text-5xl py-4 underline underline-offset-8 pt-2">
         Contact Us
       </h1>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto pt-7">
-        <div className="flex flex-col-2 gap-x-6">
-          <div className="mb-6">
+        <div className="flex flex-col gap-y-6">
+          <div>
             <label
               htmlFor="name"
               className="block text-white text-sm font-bold mb-2"
@@ -45,7 +45,7 @@ const ContactUs = () => {
               required
             />
           </div>
-          <div className="mb-6">
+          <div>
             <label
               htmlFor="email"
               className="block text-white text-sm font-bold mb-2"
@@ -64,7 +64,7 @@ const ContactUs = () => {
             />
           </div>
         </div>
-        <div className="mb-6">
+        <div>
           <label
             htmlFor="message"
             className="block text-white text-sm font-bold mb-2"

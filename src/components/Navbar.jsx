@@ -3,16 +3,16 @@ import { links } from "../data";
 
 const Navbar = () => {
   return (
-    <div className="mx-auto px-4 py-4  flex gap-x-4 justify-between fixed top-0 left-0 right-0 bg-white rounded-sm">
+    <div className="mx-auto px-4 py-4 sm:flex sm:justify-between sm:items-center fixed top-0 left-0 right-0 bg-white rounded-sm">
       <section>
-        <h1 className="flex text-5xl">
-          Book<section className="text-orange-900">Tales</section>
+        <h1 className="text-3xl sm:text-5xl">
+          Book<span className="text-orange-900">Tales</span>
         </h1>
       </section>
-      <div className="flex gap-x-3 ">
+      <div className="flex gap-x-4">
         {links.map((link) => (
           <a
-            className="item-center py-4 text-lg hover:text-orange-900 hover:cursor-pointer capitalize font-medium px-5"
+            className="py-4 text-lg hover:text-orange-900 hover:cursor-pointer capitalize font-medium"
             key={link.id}
             href={link.href}
           >
