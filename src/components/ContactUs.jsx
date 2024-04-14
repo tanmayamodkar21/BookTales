@@ -25,7 +25,7 @@ const ContactUs = () => {
       <h1 className="text-center text-white font-bold text-3xl md:text-5xl py-4 underline underline-offset-8 pt-2">
         Contact Us
       </h1>
-      <form onSubmit={handleSubmit} className="max-w-md mx-auto pt-7">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto pt-7 px-4">
         <div className="flex flex-col gap-y-6">
           <div>
             <label
@@ -82,7 +82,7 @@ const ContactUs = () => {
             required
           ></textarea>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-6">
           <button
             type="submit"
             className="bg-white hover:bg-gray-200 text-orange-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"

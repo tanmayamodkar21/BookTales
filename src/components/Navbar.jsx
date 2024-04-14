@@ -1,37 +1,163 @@
-import React from "react";
-import { links } from "../data";
+import React, { useState } from "react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="mx-auto px-4 py-4 sm:flex sm:justify-between sm:items-center fixed top-0 left-0 right-0 bg-white rounded-sm">
-      <section>
-        <h1 className="text-3xl sm:text-5xl">
-          Book<span className="text-orange-900">Tales</span>
-        </h1>
-      </section>
-      <div className="flex gap-x-4">
-        {links.map((link) => (
-          <a
-            className="py-4 text-lg hover:text-orange-900 hover:cursor-pointer capitalize font-medium"
-            key={link.id}
-            href={link.href}
-          >
-            {link.text}
-          </a>
-        ))}
-        <a href="#_" className="relative inline-block text-lg group">
-          <span className="relative z-10 block px-5 py-3 overflow-hidden font-medium leading-tight text-orange-900 transition-colors duration-300 ease-out border-2 border-orange-900 rounded-lg group-hover:text-white">
-            <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-lg bg-gray-50"></span>
-            <span className="absolute left-0 w-48 h-48 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-orange-900 group-hover:-rotate-180 ease"></span>
-            <span className="relative">Track Expenses</span>
-          </span>
-          <span
-            className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-orange-900 rounded-lg group-hover:mb-0 group-hover:mr-0"
-            data-rounded="rounded-lg"
-          ></span>
-        </a>
+    <nav className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <div className="flex-shrink-0 flex items-center">
+              <img
+                className="block lg:hidden h-8 w-auto"
+                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
+                alt="Workflow"
+              />
+              <img
+                className="hidden lg:block h-8 w-auto"
+                src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
+                alt="Workflow"
+              />
+            </div>
+            <div className="hidden sm:ml-6 sm:flex">
+              <a
+                href="#"
+                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
+              >
+                Dashboard
+              </a>
+              <a
+                href="#"
+                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
+              >
+                Team
+              </a>
+              <a
+                href="#"
+                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
+              >
+                Projects
+              </a>
+              <a
+                href="#"
+                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
+              >
+                Calendar
+              </a>
+            </div>
+          </div>
+          <div className="flex items-center">
+            <div className="hidden sm:ml-6 sm:flex">
+              <a
+                href="#"
+                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
+              >
+                Settings
+              </a>
+              <a
+                href="#"
+                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
+              >
+                Support
+              </a>
+            </div>
+            <div className="-mr-2 flex items-center sm:hidden">
+              <button
+                onClick={toggleMenu}
+                type="button"
+                className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="sr-only">Open main menu</span>
+                {!isOpen ? (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="block h-6 w-6"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+      <div className={`${isOpen ? "block" : "hidden"} sm:hidden`} id="mobile-menu">
+        <div className="px-2 pt-2 pb-3 space-y-1">
+          <a
+            href="#"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
+          >
+            Dashboard
+          </a>
+          <a
+            href="#"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
+          >
+            Team
+          </a>
+          <a
+            href="#"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
+          >
+            Projects
+          </a>
+          <a
+            href="#"
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
+          >
+            Calendar
+          </a>
+        </div>
+        <div className="pt-4 pb-3 border-t border-gray-200">
+          <div className="px-2 space-y-1">
+            <a
+              href="#"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Settings
+            </a>
+            <a
+              href="#"
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
+            >
+              Support
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 };
 

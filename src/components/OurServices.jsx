@@ -13,27 +13,27 @@ const OurServices = () => {
         </h1>
       </section>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-28 px-4 sm:px-10 pt-5">
-        <div className="flex flex-col items-center bg-white rounded-md">
-          <img src={collect_data} alt="" className="services-cols-img" />
-          <p className="text-left text-lg font-normal px-4 sm:px-52 pt-6 pb-10 text-black tracking-wide">
+        <div className="flex flex-col items-center bg-white rounded-md md:col-span-1 p-8">
+          <img src={collect_data} alt="" className="services-cols-img h-40 mb-6" />
+          <p className="text-lg font-normal text-center text-black tracking-wide">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
             fugiat aperiam nobis eaque vero. Architecto fuga illo ipsum,
             consequatur quam quidem laudantium amet, aspernatur soluta pariatur
             esse ex odit consectetur?
           </p>
         </div>
-        <div className="flex flex-col items-center bg-white rounded-md">
-          <img src={done_checking} alt="" className="services-cols-img" />
-          <p className="text-left text-lg font-normal px-4 sm:px-52 pt-6 pb-10 text-black tracking-wide">
+        <div className="flex flex-col items-center bg-white rounded-md md:col-span-1 p-8">
+          <img src={done_checking} alt="" className="services-cols-img h-40 mb-6" />
+          <p className="text-lg font-normal text-center text-black tracking-wide">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
             fugiat aperiam nobis eaque vero. Architecto fuga illo ipsum,
             consequatur quam quidem laudantium amet, aspernatur soluta pariatur
             esse ex odit consectetur?
           </p>
         </div>
-        <div className="flex flex-col items-center bg-white rounded-md">
-          <img src={show_data} alt="" className="services-cols-img" />
-          <p className="text-left text-lg font-normal px-4 sm:px-52 pt-6 pb-10 text-black tracking-wide">
+        <div className="flex flex-col items-center bg-white rounded-md md:col-span-1 p-8">
+          <img src={show_data} alt="" className="services-cols-img h-40 mb-6" />
+          <p className="text-lg font-normal text-center text-black tracking-wide">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
             fugiat aperiam nobis eaque vero. Architecto fuga illo ipsum,
             consequatur quam quidem laudantium amet, aspernatur soluta pariatur
