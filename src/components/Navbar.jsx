@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { links } from "../data";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,57 +14,35 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex">
             <div className="flex-shrink-0 flex items-center">
-              <img
-                className="block lg:hidden h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                alt="Workflow"
-              />
-              <img
-                className="hidden lg:block h-8 w-auto"
-                src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
-                alt="Workflow"
-              />
+              <h1 className="text-3xl sm:text-5xl h-8 w-auto">
+                Book<span className="text-orange-900">Tales</span>
+              </h1>
             </div>
-            <div className="hidden sm:ml-6 sm:flex">
-              <a
-                href="#"
-                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-              >
-                Dashboard
-              </a>
-              <a
-                href="#"
-                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-              >
-                Team
-              </a>
-              <a
-                href="#"
-                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-              >
-                Projects
-              </a>
-              <a
-                href="#"
-                className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
-              >
-                Calendar
-              </a>
+            <div className="hidden sm:ml-6 sm:flex items-center">
+              {links.map((link) => (
+                <a
+                  className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
+                  key={link.id}
+                  href={link.href}
+                >
+                  {link.text}
+                </a>
+              ))}
             </div>
           </div>
           <div className="flex items-center">
             <div className="hidden sm:ml-6 sm:flex">
-              <a
+              {/* <a
                 href="#"
                 className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
               >
                 Settings
-              </a>
+              </a> */}
               <a
                 href="#"
                 className="ml-3 px-3 py-2 rounded-md text-sm font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50 focus:outline-none focus:text-gray-900 focus:bg-gray-50"
               >
-                Support
+                Profile
               </a>
             </div>
             <div className="-mr-2 flex items-center sm:hidden">
@@ -113,46 +92,34 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"} sm:hidden`} id="mobile-menu">
+      <div
+        className={`${isOpen ? "block" : "hidden"} sm:hidden`}
+        id="mobile-menu"
+      >
         <div className="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
-          >
-            Dashboard
-          </a>
-          <a
-            href="#"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
-          >
-            Team
-          </a>
-          <a
-            href="#"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
-          >
-            Projects
-          </a>
-          <a
-            href="#"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
-          >
-            Calendar
-          </a>
+          {links.map((link) => (
+            <a
+              className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
+              key={link.id}
+              href={link.href}
+            >
+              {link.text}
+            </a>
+          ))}
         </div>
         <div className="pt-4 pb-3 border-t border-gray-200">
           <div className="px-2 space-y-1">
-            <a
+            {/* <a
               href="#"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
             >
               Settings
-            </a>
+            </a> */}
             <a
               href="#"
               className="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:text-gray-900 hover:bg-gray-50"
             >
-              Support
+              Profile
             </a>
           </div>
         </div>
