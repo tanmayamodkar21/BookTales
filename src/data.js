@@ -14,7 +14,7 @@ export const heroData = {
 // About us data
 export const services_data = {
   title: "Our Services",
-  text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum eos, animi quod, magni autem asperiores tempore blanditiis nesciunt error, laboriosam natus optio fugiat cupiditate! Nulla illo labore sapiente maxime earum.",
+  text: "Gain insights into hotel pricing trends with our detailed monthly cost analysis. Our platform provides comprehensive data on hotel rates across different months, helping you understand seasonal fluctuations and identify the best times to book. Make informed decisions and save money on your hotel stays with our expert analysis.",
 };
 
 export const about_data = {

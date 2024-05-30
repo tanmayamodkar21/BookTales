@@ -20,10 +20,14 @@ const OurServices = () => {
             className="services-cols-img h-40 mb-6"
           />
           <p className="text-lg font-normal text-center text-black tracking-wide">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            fugiat aperiam nobis eaque vero. Architecto fuga illo ipsum,
-            consequatur quam quidem laudantium amet, aspernatur soluta pariatur
-            esse ex odit consectetur?
+            <b>Monthly Cost Analysis</b>
+            <br />
+            Gain insights into hotel pricing trends with our detailed monthly
+            cost analysis. Our platform provides comprehensive data on hotel
+            rates across different months, helping you understand seasonal
+            fluctuations and identify the best times to book. Make informed
+            decisions and save money on your hotel stays with our expert
+            analysis.
           </p>
         </div>
         <div className="flex flex-col items-center bg-white rounded-md md:col-span-1 p-8">
@@ -33,19 +37,26 @@ const OurServices = () => {
             className="services-cols-img h-40 mb-6"
           />
           <p className="text-lg font-normal text-center text-black tracking-wide">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            fugiat aperiam nobis eaque vero. Architecto fuga illo ipsum,
-            consequatur quam quidem laudantium amet, aspernatur soluta pariatur
-            esse ex odit consectetur?
+            <b>Budget Forecasting</b>
+            <br />
+            Plan your travel budget effectively with our budget forecasting
+            service. We analyze historical data and current trends to predict
+            hotel costs for future months. Whether you're planning a vacation or
+            a business trip, our forecasting tools help you allocate your budget
+            wisely and avoid unexpected expenses.
           </p>
         </div>
         <div className="flex flex-col items-center bg-white rounded-md md:col-span-1 p-8">
           <img src={show_data} alt="" className="services-cols-img h-40 mb-6" />
           <p className="text-lg font-normal text-center text-black tracking-wide">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-            fugiat aperiam nobis eaque vero. Architecto fuga illo ipsum,
-            consequatur quam quidem laudantium amet, aspernatur soluta pariatur
-            esse ex odit consectetur?
+            <b>Customized Reports</b>
+            <br />
+            Receive personalized reports tailored to your specific needs. Our
+            customized reports offer in-depth analysis of hotel prices for your
+            chosen destinations and timeframes. With easy-to-read charts and
+            graphs, you can quickly grasp the cost patterns and make strategic
+            booking decisions. Optimize your travel plans with our tailored
+            insights.
           </p>
         </div>
       </div>
