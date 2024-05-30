@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import { heroData } from "../data";
 import HeroImage from "../assets/hero_img.svg";
@@ -7,12 +6,10 @@ import HeroImage from "../assets/hero_img.svg";
 const Hero = () => {
   const { isAuthenticated } = useAuth0();
   const [showAlert, setShowAlert] = useState(false);
-  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleClick = () => {
     if (isAuthenticated) {
-      setLoggedIn(true);
-      // <Link to="/analysis"></Link>;
+      window.location.href = "https://hotel-app.streamlit.app/";
     } else {
       setShowAlert(true);
       setTimeout(() => {
@@ -51,7 +48,6 @@ const Hero = () => {
           >
             Explore Now
           </button>
-          {loggedIn && <Link to="/analysis"></Link>}
         </section>
         <section className="flex justify-center md:justify-end">
           <img
